@@ -1,5 +1,6 @@
 let humanScore = 0;
 let computerScore = 0;
+let NUM_ROUNDS = 5;
 
 
 // Randomly generates a number to fetch an RPS move 
@@ -37,10 +38,10 @@ function getHumanChoice() {
 // Simulates one round of Rock, Paper Scissors
 function playRound(humanChoice, computerChoice) {
     if (humanChoice == undefined) {
-        console.log("Invalid Choice")
+        console.log("Invalid Choice");
     } 
     else if (humanChoice == computerChoice) {
-        console.log("It's a Tie!")
+        console.log("It's a Tie!");
     }
     else if ((humanChoice == "rock" && computerChoice == "paper") || 
             (humanChoice == "paper" && computerChoice == "scissors") || 
@@ -54,5 +55,21 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
+function playGame() {
+    humanScore = 0;
+    computerScore = 0;
 
-playRound(getHumanChoice(), getComputerChoice());
+    for (let i = 0; i < NUM_ROUNDS; i++) {
+        playRound(getHumanChoice(), getComputerChoice());
+    }
+
+    if (humanScore > computerScore) {
+        console.log("You Win!!");
+    } else if (humanScore < computerScore) {
+        console.log("You Lose!!");
+    } else {
+        console.log("It's a Tie!");
+    }
+}
+
+playGame();
