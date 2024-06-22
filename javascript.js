@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 
 // Randomly generates a number to fetch an RPS move 
 function getComputerChoice() {
