@@ -1,4 +1,3 @@
-console.log("Hello World");
 
 // Randomly generates a number to fetch an RPS move 
 function getComputerChoice() {
@@ -14,8 +13,24 @@ function getComputerChoice() {
     else {
         computerChoice = "scissors";
     }
-    
+
     return computerChoice;
 }
 
-console.log(getComputerChoice());
+// Parses player's choice and returns it if is valid
+function getHumanChoice() {
+    let playerChoice = prompt("Choose Rock, Paper, or Scissors: ");
+
+    let cleanedChoice = playerChoice.trim().toLowerCase()
+    if (cleanedChoice == "rock" ||
+        cleanedChoice == "paper" ||
+        cleanedChoice == "scissors") {
+            return cleanedChoice;
+    } else {
+        return undefined;
+    }
+}
+
+
+
+console.log(getHumanChoice());
