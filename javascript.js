@@ -34,6 +34,25 @@ function getHumanChoice() {
     }
 }
 
+// Simulates one round of Rock, Paper Scissors
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice == undefined) {
+        console.log("Invalid Choice")
+    } 
+    else if (humanChoice == computerChoice) {
+        console.log("It's a Tie!")
+    }
+    else if ((humanChoice == "rock" && computerChoice == "paper") || 
+            (humanChoice == "paper" && computerChoice == "scissors") || 
+            (humanChoice == "scissors" && computerChoice == "rock")) {
+                console.log(`You lose! ${computerChoice} beats ${humanChoice}.`)
+                computerScore++;
+            }
+    else {
+        console.log(`You win! ${humanChoice} beats ${computerChoice}.`)
+        humanScore++;
+    }
+}
 
 
-console.log(getHumanChoice());
+playRound(getHumanChoice(), getComputerChoice());
