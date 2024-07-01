@@ -1,0 +1,38 @@
+body {
+    background-color: bisque;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    font-size: xx-large;
+}
+
+
+.results {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 100px;
+}
+
+.scores {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.outcomes {
+    font-size: large;
+}
+
+.gameOutcome {
+    font-size: larger;
+    font-weight: 900;
+    text-align: center;
+}
